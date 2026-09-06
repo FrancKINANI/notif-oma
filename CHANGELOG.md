@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Renamed from "Omapager" to "Omaping"
-- Plugin ID: `njpatel.omapager` → `njpatel.omaping`
+- Plugin ID: `njpatel.omapager` → `franckinani.omaping`
 - IPC targets: `omapager` → `omaping`, `omapager.panel` → `omaping.panel`
 - State paths: `~/.local/state/omarchy/omapager/` → `~/.local/state/omarchy/omaping/`
 - Config paths: `~/.config/omarchy/omapager/` → `~/.config/omarchy/omaping/`
