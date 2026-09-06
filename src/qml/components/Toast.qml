@@ -11,7 +11,7 @@ import qs.Commons
 
 import qs.Ui
 
-import "../js/core/Markup.js" as Markup
+import "../../js/core/Markup.js" as Markup
 
 Item {
   id: card
