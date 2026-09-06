@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "njpatel.omaping",
+  "id": "franckinani.omaping",
   "name": "Omaping",
   "version": "0.1.0",
-  "author": "Neil Patel",
+  "author": "FrancKINANI",
   "license": "Apache-2.0",
   "description": "Notifications for Omarchy: a stacking, grouping replacement for the built-in service, with markup parsing, resolved source icons, inline reply, and per-source snooze.",
   "kinds": [

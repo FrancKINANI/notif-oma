@@ -1,5 +1,3 @@
-<img src="assets/title.png" width="1266" alt="Omaping">
-
 <!--
  ▄█████▄    ▄███████████▄   ▄███████   ▄███████▄  ▄███████    ▄█████▄   ▄████████  ▄███████▄
 ███   ███  ███   ███   ███  ███   ███  ███   ███  ███   ███  ███   ███  ███   ███  ███   ███
@@ -84,11 +82,28 @@ file.
 **Resolves real icons.** Your own icon themes win; web notifications fall back
 to the site's own icon, in dark and light variants to suit the theme.
 
+## Fork Notice
+
+This is a security-hardened fork of [njpatel/omapager](https://github.com/njpatel/omapager) by Neil Patel.
+The original project was renamed from "Omapager" to "Omaping" and reorganized with a modular structure.
+
+Key changes from upstream:
+- Default `fetchIcons: false` (opt-in network requests)
+- Input sanitization for all IPC and CLI arguments
+- Exact-match only for KDE Connect reply channels (prevents spoofing)
+- Redirect limits and punycode decoding for icon fetcher (prevents SSRF/homograph)
+- History files stored with 0600 permissions, sensitive fields excluded
+- Max notification cap (100) to prevent DoS
+- Rate limiting on IPC endpoints
+- Modular `src/` layout with proper Python package
+
+See [CHANGELOG.md](CHANGELOG.md) for full details.
+
 ## Install
 
 ```bash
-git clone https://github.com/njpatel/omaping.git \
-  ~/.config/omarchy/plugins/njpatel.omaping
+git clone https://github.com/FrancKINANI/notif-oma.git \
+  ~/.config/omarchy/plugins/franckinani.omaping
 ```
 
 Then in `~/.config/omarchy/shell.json`, turn off the built-in service, add the
@@ -98,8 +113,8 @@ it behaves like one:
 ```json
 {
   "disabledPlugins": ["omarchy.notifications"],
-  "plugins": [{ "id": "njpatel.omaping" }],
-  "bar": { "layout": { "center": ["omarchy.indicators", "njpatel.omaping", "omarchy.clock"] } }
+  "plugins": [{ "id": "franckinani.omaping" }],
+  "bar": { "layout": { "center": ["omarchy.indicators", "franckinani.omaping", "omarchy.clock"] } }
 }
 ```
 
@@ -109,12 +124,12 @@ resets `shell.json` to defaults.)
 ### Removing it
 
 ```bash
-omarchy plugin remove njpatel.omaping
+omarchy plugin remove franckinani.omaping
 ```
 
 Then undo the three lines above: take `omarchy.notifications` back out of
 `disabledPlugins` so the built-in service can claim the bus again, and drop
-`njpatel.omaping` from the bar layout. `omarchy-restart-shell` to apply.
+`franckinani.omaping` from the bar layout. `omarchy-restart-shell` to apply.
 
 State is left behind on purpose, in case you are only reinstalling —
 `rm -rf ~/.local/state/omarchy/omaping` clears the history and the resolved
@@ -145,7 +160,7 @@ Settings live on the bar widget's entry in `shell.json`, all in one place
 next to `id`:
 
 ```json
-{ "id": "njpatel.omaping", "snoozeDurations": ["60", "480"], "wakeHour": 9 }
+{ "id": "franckinani.omaping", "snoozeDurations": ["60", "480"], "wakeHour": 9 }
 ```
 
 ## The bar

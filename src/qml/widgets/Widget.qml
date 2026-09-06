@@ -20,11 +20,11 @@ import qs.Ui
 
 BarWidget {
   id: pager
-  moduleName: "njpatel.omaping"
+  moduleName: "franckinani.omaping"
 
   // The daemon, if it is up. Everything that reads it degrades to empty rather
   // than breaking the bar.
-  readonly property var service: bar && bar.shell ? bar.shell.serviceFor("njpatel.omaping") : null
+  readonly property var service: bar && bar.shell ? bar.shell.serviceFor("franckinani.omaping") : null
   readonly property bool silenced: service ? service.doNotDisturb : false
 
   // liveSnoozes() reads a plain map, which nothing re-evaluates on its own, so
