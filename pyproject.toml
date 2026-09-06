@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omaping"
+version = "0.1.0"
+description = "Notifications for Omarchy: a stacking, grouping replacement for the built-in service"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [{name = "Neil Patel"}]
+requires-python = ">=3.10"
+dependencies = [
+    "pillow",
+    "idna",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Desktop Environment",
+]
+
+[project.scripts]
+omaping-store = "omaping.store:main"
+omaping-icon = "omaping.icon:main"
+omaping-kdeconnect = "omaping.kdeconnect:main"
+omaping-demo = "omaping.demo:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "ruff",
+    "mypy",
+]
+
+[tool.setuptools.packages.find]
+where = ["src/python"]
+include = ["omaping*"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+select = ["E", "F", "I", "UP", "B", "C4", "PT", "T20", "W", "YTT"]
+ignore = ["E501", "TRY003"]
+fixable = ["ALL"]
+unfixable = ["T20"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true

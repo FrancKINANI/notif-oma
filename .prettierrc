@@ -1,0 +1,17 @@
+{
+  "parser": "babel",
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "printWidth": 100,
+  "bracketSpacing": true,
+  "semi": true,
+  "overrides": [
+    {
+      "files": "*.qml",
+      "options": {
+        "parser": "babel"
+      }
+    }
+  ]
+}

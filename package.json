@@ -1,0 +1,31 @@
+{
+  "name": "omaping",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js,qml}\"",
+    "format:check": "prettier --check \"src/**/*.{js,qml}\"",
+    "lint": "eslint \"src/**/*.js\""
+  },
+  "devDependencies": {
+    "prettier": "^3.2.0",
+    "eslint": "^8.56.0"
+  },
+  "prettier": {
+    "parser": "babel",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "printWidth": 100,
+    "bracketSpacing": true,
+    "semi": true
+  },
+  "overrides": [
+    {
+      "files": "*.qml",
+      "options": {
+        "parser": "babel"
+      }
+    }
+  ]
+}
