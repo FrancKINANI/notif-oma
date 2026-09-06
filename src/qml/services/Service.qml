@@ -18,7 +18,7 @@ import qs.Commons
 
 import "../js/core/Store.js" as Store
 import "../js/core/Layout.js" as Layout
-import "../components/Toast.qml" as Toast
+import "../../components/Toast.qml"
 
 Item {
   id: service
