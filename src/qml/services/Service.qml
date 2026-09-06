@@ -16,8 +16,8 @@ import Quickshell.Hyprland
 import Quickshell.Services.Notifications
 import qs.Commons
 
-import "../js/core/Store.js" as Store
-import "../js/core/Layout.js" as Layout
+import "../../js/core/Store.js" as Store
+import "../../js/core/Layout.js" as Layout
 import "." as Components
 
 Item {
@@ -27,8 +27,8 @@ Item {
   property var shell: null
 
   readonly property string home: Quickshell.env("HOME")
-  readonly property string storeBin: Qt.resolvedUrl("../python/scripts/omaping-store").toString().replace(/^file:\/\//, "")
-  readonly property string iconBin: Qt.resolvedUrl("../python/scripts/omaping-icon").toString().replace(/^file:\/\//, "")
+  readonly property string storeBin: Qt.resolvedUrl("../../python/scripts/omaping-store").toString().replace(/^file:\/\//, "")
+  readonly property string iconBin: Qt.resolvedUrl("../../python/scripts/omaping-icon").toString().replace(/^file:\/\//, "")
 
   // Ask the site for its icon when nothing local matches. On by default: a
   // notification wearing the wrong logo is the thing people notice first. It
@@ -1168,7 +1168,7 @@ Item {
   // keeps an object per phone notification on its own bus carrying a replyId
   // and a sendReply method - the part the freedesktop spec has no room for -
   // and the helper matches our row to it by app name and text.
-  readonly property string kdeBin: Qt.resolvedUrl("../python/scripts/omaping-kdeconnect")
+  readonly property string kdeBin: Qt.resolvedUrl("../../python/scripts/omaping-kdeconnect")
                                      .toString().replace(/^file:\/\//, "")
   property string replyingKey: ""        // the card with its reply box open
 
