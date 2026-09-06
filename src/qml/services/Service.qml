@@ -1,4 +1,4 @@
-// Omapager - notifications for Omarchy.
+// Omaping - notifications for Omarchy.
 //
 // This file IS the notification daemon: Quickshell's NotificationServer owns
 // org.freedesktop.Notifications, so omarchy.notifications must be listed in
@@ -18,7 +18,7 @@ import qs.Commons
 
 import "../js/core/Store.js" as Store
 import "../js/core/Layout.js" as Layout
-import "Toast.qml"
+import "./Toast.qml"
 
 Item {
   id: service
