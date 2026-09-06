@@ -18,7 +18,7 @@ import qs.Commons
 
 import "../js/core/Store.js" as Store
 import "../js/core/Layout.js" as Layout
-import "./Toast.qml"
+import "." as Components
 
 Item {
   id: service
@@ -1916,7 +1916,7 @@ Item {
         Repeater {
           model: toasts
 
-          Toast {
+          Components.Toast {
             id: toast
             required property var model
             row: model
